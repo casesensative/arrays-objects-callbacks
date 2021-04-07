@@ -131,7 +131,11 @@ contains(names, 'Colt', function(result){
 //Code Here
 
 let uniq = function(arr, cb) {
-  
+  let noDupes = arr.filter(function(e, i) {
+    return arr.indexOf(e) === i;
+  });
+  cb(noDupes);
+
 }
 
 // Do not edit the code below.
@@ -149,7 +153,13 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here 
+//Code Here
+
+function each(arr, cb) {
+  arr.forEach(function(e, i) {
+    cb(e, i);
+  })
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -167,6 +177,13 @@ each(names, function(item, indice){
 */
 
 // Code here
+
+function getUserById(arr, id, cb) {
+  let user = arr.filter(function(e) {
+    return e.id === id;
+  })
+  cb(user[0]);
+}
 
 // Do not edit the code below.
 var users = [
