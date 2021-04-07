@@ -29,6 +29,10 @@
 
 // Code Here 
 
+function first(arr, cb) {
+  cb(arr[0]);
+}
+
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -49,6 +53,11 @@ first(names, function(firstName){
 
 //Code Here
 
+function last(arr, cb) {
+  lastElement = arr[arr.length -1];
+  cb(lastElement);
+}
+
 // Do not edit the code below.
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -66,6 +75,11 @@ last(names, function(lastName){
 */
 
 //Code Here
+
+function multiply(num, num2, cb) {
+  let prod = num * num2;
+  cb(prod);
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -85,6 +99,15 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+
+
+let contains = function(arr, name, cb) {
+  if (arr.indexOf(name) !== -1) {
+    cb(true);
+  } else {
+    cb(false)
+  };
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -106,6 +129,10 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+
+let uniq = function(arr, cb) {
+  
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
