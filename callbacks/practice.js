@@ -179,9 +179,7 @@ each(names, function(item, indice){
 // Code here
 
 function getUserById(arr, id, cb) {
-  let user = arr.filter(function(e) {
-    return e.id === id;
-  })
+  let user = arr.filter((e) => e.id === id);
   cb(user[0]);
 }
 
